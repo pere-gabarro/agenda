@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    <b>Prueba 1</b>
+  </p>
+  <p>
+    A los 5 segundos, cambia valor del atributo <i>book.name</i> y de la imagen
+  </p>
+  <p>
+    <b>Prueba 2</b>
+  </p>
+  <p>
+    El color de <i>book.author</i> cambia en función del valor de <i>book.name</i>
+  </p>
+  <h2 [style.color]="color(book.name)">{{book.author}}</h2>
+  <h3 [ngStyle]="colorStyle(book.name)" [textContent]="book.name"></h3>
+  <img [src]="srcImgBook" height="42" width="42"/>
+  
+  <p>
+    <b>Prueba 3</b>
+  </p>
+  <p>
+    Captura de los eventos sobre botones y campos de texto
+  </p>
+  <p>
+    <button (click)="onClick($event)" >Click Me</button>
+  </p>
+  <p>
+    <input (keyup)="search($event)">
+  </p>
+  <p>
+    <input (keyup)="onKey(search.value)">
+  </p>
+</ion-content>
